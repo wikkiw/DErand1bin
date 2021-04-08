@@ -24,3 +24,6 @@ Příklad volání:
 zavolá optimalizaci 3. funkce z benchmarku CEC2020 v 10 dimenzích s ukončovacím kritériem 10000 ohodnocení účelové funkce. Vytvoří v kořenovém adresáři soubor s výsledkem:
 > DErandCEC2020_f3_d10_run-1.txt
 
+## Java RMI
+
+> Metoda getResult
