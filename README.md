@@ -2,11 +2,11 @@
 
 ### Tohle je testovací projekt pro DP Bc. Babáka.
 
-Stačí celý repozitář stáhnout, zkompilovat přes:
+Stačí celý repozitář stáhnout, rozbalit, případně (nemělo by to být potřeba) zkompilovat ze složky src/main/java:
 
 `javac cz/viktorin/derand1bin/DErand1bin.java`
 
-A pak spouštět:
+A pak spouštět ze složky src/main/java:
 
 `java cz/viktorin/derand1bin/DErand1bin [prefix] [f] [dim] [fes] [runID]`
 
