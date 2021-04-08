@@ -539,6 +539,12 @@ public class DErand1bin implements Algorithm {
     
     /**
      * Method for remote invocation
+     * 
+     * @param func
+     * @param dimension
+     * @param maxfes
+     * @return
+     * @throws Exception 
      */
     public static double getResult(int func, int dimension, int maxfes) throws Exception {
         
@@ -559,6 +565,11 @@ public class DErand1bin implements Algorithm {
         
     }
     
+    /**
+     * 
+     * @param args
+     * @throws Exception 
+     */
     public static void main(String[] args) throws Exception {
     
         /**
@@ -574,15 +585,6 @@ public class DErand1bin implements Algorithm {
         int dimension = Integer.parseInt(args[2]);
         int MAXFES = Integer.parseInt(args[3]);
         int runID = Integer.parseInt(args[4]);
-        
-        int NP = 100;
-        TestFunction tf = new Cec2020(dimension, func);
-        Random generator = new UniformRandom();
-        double f = 0.5, cr = 0.8;
-
-        Algorithm de;
-        de = new DErand1bin(dimension, NP, MAXFES, tf, generator, f, cr);
-        de.runAlgorithm();
         
         System.out.println("Run ID: " + runID);
         
