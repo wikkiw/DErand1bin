@@ -14,7 +14,7 @@ Kde platí následující nastavení:
 - `[prefix]` je textový prefix vzniklého souboru, např. název algoritmu
 - `[f]` je id volané funkce, povolený rozsah 1-15
 - `[dim]` je dimenze problému, povolené hodnoty 5, 10, 15 a 20
-- `[fes]` je počet ohodnocení účelové funkce
+- `[fes]` je počet ohodnocení účelové funkce (pro dim 5 - 50 000, 10 - 1 000 000, 15 - 3 000 000 a 20 - 10 000 000)
 - `[runID]` je ID běhu, které slouží k unikátní identifikaci výsledku
 
 Příklad volání:
