@@ -537,6 +537,28 @@ public class DErand1bin implements Algorithm {
         
     }
     
+    /**
+     * Method for remote invocation
+     */
+    public static double getResult(int func, int dimension, int maxfes) throws Exception {
+        
+        int NP = 100;
+        TestFunction tf = new Cec2020(dimension, func);
+        Random generator = new UniformRandom();
+        double f = 0.5, cr = 0.8;
+
+        Algorithm de;
+        de = new DErand1bin(dimension, NP, maxfes, tf, generator, f, cr);
+        de.runAlgorithm();
+        
+        System.out.println(new Date());
+        double best = (de.getBest().fitness - tf.optimum());
+        System.out.println("Result error: " + best);
+
+        return best;
+        
+    }
+    
     public static void main(String[] args) throws Exception {
     
         /**
@@ -562,10 +584,10 @@ public class DErand1bin implements Algorithm {
         de = new DErand1bin(dimension, NP, MAXFES, tf, generator, f, cr);
         de.runAlgorithm();
         
-        System.out.println(new Date());
         System.out.println("Run ID: " + runID);
-        double best = (de.getBest().fitness - tf.optimum());
-        System.out.println("Result error: " + best);
+        
+        double best = getResult(func, dimension, MAXFES);
+
         String fileName = prefix + "CEC2020_f" + func + "_d" + dimension + "_run-" + runID + ".txt";
         exportResult(fileName, best);
         
