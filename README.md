@@ -1,4 +1,4 @@
-# DErand1bin
+# DErand1bin - CEC2020
 
 ### Tohle je testovací projekt pro DP Bc. Babáka.
 
